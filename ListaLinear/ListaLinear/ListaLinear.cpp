@@ -1,3 +1,4 @@
+// Maurício de Carvalho Rodrigues
 
 #include <iostream>
 using namespace std;
@@ -12,7 +13,7 @@ void buscarElemento();
 //--------------------------
 
 
-const int MAX = 2;;
+const int MAX = 5;
 int lista[MAX]{};
 int nElementos = 0;
 
@@ -104,5 +105,26 @@ void inserirElemento()
 // deve ser implementada como resposta ao exercicio
 void buscarElemento()
 {
+	bool numeroExiste = false;
+	int busca = 0;
+	int posicao = 0;
+	cout << "Digite um numero: " << endl;
+	cin >> busca;
 
+	for (int i = 0; i < nElementos; i++)
+	{
+		if (busca == lista[i])
+		{
+			numeroExiste = true;
+			posicao = i + 1;
+		}
+	}
+
+	if (numeroExiste)
+	{
+		cout << "O elemento esta na " << posicao << " posicao da lista" << endl;
+	}
+	else {
+		cout << "O elemento nao esta na lista" << endl;
+	}
 }
